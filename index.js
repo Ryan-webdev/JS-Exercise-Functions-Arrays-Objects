@@ -61,7 +61,7 @@ function temperatureCtoF(celsius) {
  * ### Challenge `temperatureInF`
  * 
  * @instructions
- * This function should take an a temperature and a unit (either 'F' or 'C') as arguments,
+ * This function should take in a temperature and a unit (either 'F' or 'C') as arguments,
  * and return the temperature in fahrenheit, rounded to the nearest whole number. 
  * 
  * For example, if we invoke `temperatureInF`
@@ -74,8 +74,16 @@ function temperatureCtoF(celsius) {
  * 
  * Hint: You can call your `temperatureCtoF` function from inside `temperatureInF`.
 */
-function temperatureInF(/* code here */) {
-  /* code here */
+function temperatureInF(degree, F, C) {
+  let degree1 = degree.toString()
+  let degree2 = degree1 + F;
+  
+  if (degree2.includes("F")) {
+    return degree + "F";
+  }
+  else{
+    return temperatureCtoF(degree) + "F";
+  }
 }
 
 
